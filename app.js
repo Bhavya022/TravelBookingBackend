@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-
+const cors = require('cors');
 // Middleware for parsing JSON requests
 app.use(express.json());
-
+app.use(cors());
 // Routes for flights, hotels, and cars (to be defined later)
 const flightRoutes = require('./routes/flightRoutes');
 const hotelRoutes = require('./routes/hotelRoutes');
